@@ -1,4 +1,3 @@
-# rootme
-rootme wargames
+# wargames
 
-Working through wargames and recording the interesting points.
+Place to record notes from wargames

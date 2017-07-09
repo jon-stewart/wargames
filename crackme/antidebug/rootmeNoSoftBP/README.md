@@ -4,7 +4,7 @@
 
 This is the first good crackme on the rootme site (working through sequentially).  Interesting anti-debugging trick that I will have to remember.
 
-Hand crafted assembly elf using syscall for IO.  The interesting parts are below:
+Hand crafted assembly using syscall for IO.  The interesting parts are below:
 
 
     [0x08048080]> pdf@entry0
@@ -59,7 +59,7 @@ Each byte of the user input/password (0x8049188) is XOR'd against each byte of t
     password ^ intermediate ^ key == 0
 
 
-To solve this crackme - set a hardware breakpoint.  Except that hw breakpoints didn't work in r2 or gdb.  Instead I had to:
+To solve this crackme - set a hardware breakpoint.  Except that for me hw breakpoint didn't work in radare2 or gdb.  Instead:
 
     * Extract .text section from elf
     * Use the algorithm to find the password

@@ -16,7 +16,7 @@ rol(unsigned int val, unsigned int shift) {
 }
 
 void
-generate_cypher(void)
+generate_key(void)
 {
     FILE           *fp;
     unsigned char   buf[text_len];
@@ -53,7 +53,7 @@ decode(void)
 int
 main(void)
 {
-    generate_cypher();
+    generate_key();
 
     decode();
 
