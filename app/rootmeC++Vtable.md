@@ -31,16 +31,21 @@ This function accesses the object, dereferences the vtable pointer and calls the
 
 
 Buffer address:
+
+    gdb$ x/1wx $ebp+8
+    0xbffffb50:     0xbffffb60
+
+Object address:
     
     gdb$ x/1wx 0xbffffb60+0x50
     0xbffffbb0:     0x0804b008
 
-Object address:
+Vtable address:
     
     gdb$ x/10xw 0x0804b008
     0x804b008:      0x08048bd8
 
-Vtable address:
+Vtable:
     
     gdb$ x/4wx 0x08048bd8
     0x8048bd8 <_ZTV14LowerFormatter+8>:     0x0804894c      0x08048956      0x0804896a
